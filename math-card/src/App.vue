@@ -6,7 +6,13 @@
     </header>
     <div class="outer-container">
       <div class="card-container">
-        <Card v-for="(card, index) in cards" :key="index" :name="card.name" @click="openModal(index)" />
+        <Card 
+        v-for="(card, index) in cards" 
+        :key="index" 
+        :name="card.name" 
+        :type="card.type" 
+        :color="card.color"
+        @click="openModal(index)" />
       </div>
       <CardModal v-if="showModal" :show="showModal" :cards="cards" :initialIndex="currentCardIndex" @close="closeModal" />
     </div>

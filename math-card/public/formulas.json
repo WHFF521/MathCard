@@ -1,15 +1,80 @@
 [
-    {
-      "name": "Energy-Mass Equivalence",
-      "formula": "E = mc^2"
-    },
-    {
-      "name": "Fraction",
-      "formula": "\\frac{a}{b} = c"
-    },
-    {
-      "name": "Exponential Integral",
-      "formula": "\\int_{0}^{\\infty} e^{-x} \\, dx = 1"
-    }
-  ]
-  
+  {
+    "name": "Constant Rule | 常数规则",
+    "formula": "(c)' = 0",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Power Rule | 幂函数规则",
+    "formula": "(x^n)' = nx^{n-1}",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Constant Multiple Rule | 常数倍规则",
+    "formula": "(cf(x))' = c \\cdot f'(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Sum Rule | 和规则",
+    "formula": "(f(x) + g(x))' = f'(x) + g'(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Difference Rule | 差规则",
+    "formula": "(f(x) - g(x))' = f'(x) - g'(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Product Rule | 积规则",
+    "formula": "(f(x)g(x))' = f(x)g'(x) + f'(x)g(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Quotient Rule | 商规则",
+    "formula": "\\left(\\frac{f(x)}{g(x)}\\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Chain Rule | 链规则",
+    "formula": "(f(g(x)))' = f'(g(x)) \\cdot g'(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Exponential Function | 指数函数",
+    "formula": "(e^x)' = e^x",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Natural Logarithm | 自然对数",
+    "formula": "(\\ln(x))' = \\frac{1}{x}",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Sine Function | 正弦函数",
+    "formula": "(\\sin(x))' = \\cos(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Cosine Function | 余弦函数",
+    "formula": "(\\cos(x))' = -\\sin(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Tangent Function | 正切函数",
+    "formula": "(\\tan(x))' = \\sec^2(x)",
+    "type": "求导",
+    "color": "#4789f5"
+  }
+]

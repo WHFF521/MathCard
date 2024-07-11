@@ -87,10 +87,10 @@
   .card {
     max-width: 80vw;
     max-height: 80vh;
-    width: 80vw;
-    height: calc(80vw * 5 / 3);
-    max-height: 80vh;
-    max-width: calc(80vh * 3 / 5);
+    height: 80vh;
+    width: calc(80vh * 5 / 3);
+    max-width: 80vw;
+    max-height: calc(80vw * 3 / 5);
     display: flex;
     align-items: center;
     justify-content: center;
