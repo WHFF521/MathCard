@@ -1,10 +1,15 @@
 <!-- src/App.vue -->
 <template>
-  <div class="outer-container">
-    <div class="card-container">
-      <Card v-for="(card, index) in cards" :key="index" :name="card.name" @click="openModal(index)" />
+  <div>
+    <header class="header">
+      <h1>数学公式展示</h1>
+    </header>
+    <div class="outer-container">
+      <div class="card-container">
+        <Card v-for="(card, index) in cards" :key="index" :name="card.name" @click="openModal(index)" />
+      </div>
+      <CardModal v-if="showModal" :show="showModal" :cards="cards" :initialIndex="currentCardIndex" @close="closeModal" />
     </div>
-    <CardModal v-if="showModal" :show="showModal" :cards="cards" :initialIndex="currentCardIndex" @close="closeModal" />
   </div>
 </template>
 
@@ -44,6 +49,20 @@ onMounted(() => {
 </script>
 
 <style>
+.header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .outer-container {
   display: flex;
   justify-content: center;
@@ -57,7 +76,7 @@ onMounted(() => {
   gap: 20px;
   justify-content: center;
   width: 100%;
-  max-width: 1200px; /* 你可以根据需要调整 */
-  margin: 0 auto; /* 使卡片容器在父容器中居中 */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 </style>
