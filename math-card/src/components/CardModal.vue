@@ -105,6 +105,9 @@ const currentCardContent = computed(() => {
 @media (max-width: 767px) {
   .card {
     font-size: 24px; /* 调整手机上的字体大小 */
+    width: 90%; /* 调整手机上的卡片宽度 */
+    height: auto; /* 调整手机上的卡片高度 */
+    padding: 10px; /* 增加内边距 */
   }
 }
 
@@ -138,10 +141,12 @@ const currentCardContent = computed(() => {
 
 /* 响应式设计 */
 @media (max-width: 767px) {
-  .arrow.left, .arrow.right {
-    font-size: 24px; /* 调整手机上的箭头大小 */
-    left: -40px; /* 调整箭头位置 */
-    right: -40px; /* 调整箭头位置 */
+  .arrow.left {
+    left: 10px; /* 调整手机上的左箭头位置 */
+  }
+  
+  .arrow.right {
+    right: 10px; /* 调整手机上的右箭头位置 */
   }
 }
 </style>
