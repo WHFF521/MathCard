@@ -1,80 +1,106 @@
 [
   {
-    "name": "Constant Rule | 常数规则",
-    "formula": "(c)' = 0",
-    "type": "求导",
-    "color": "#4789f5"
-  },
-  {
     "name": "Power Rule | 幂函数规则",
     "formula": "(x^n)' = nx^{n-1}",
-    "type": "求导",
+    "type": "基本求导公式",
     "color": "#4789f5"
   },
   {
-    "name": "Constant Multiple Rule | 常数倍规则",
-    "formula": "(cf(x))' = c \\cdot f'(x)",
-    "type": "求导",
-    "color": "#4789f5"
-  },
-  {
-    "name": "Sum Rule | 和规则",
-    "formula": "(f(x) + g(x))' = f'(x) + g'(x)",
-    "type": "求导",
-    "color": "#4789f5"
-  },
-  {
-    "name": "Difference Rule | 差规则",
-    "formula": "(f(x) - g(x))' = f'(x) - g'(x)",
-    "type": "求导",
-    "color": "#4789f5"
-  },
-  {
-    "name": "Product Rule | 积规则",
-    "formula": "(f(x)g(x))' = f(x)g'(x) + f'(x)g(x)",
-    "type": "求导",
-    "color": "#4789f5"
-  },
-  {
-    "name": "Quotient Rule | 商规则",
-    "formula": "\\left(\\frac{f(x)}{g(x)}\\right)' = \\frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}",
-    "type": "求导",
-    "color": "#4789f5"
-  },
-  {
-    "name": "Chain Rule | 链规则",
-    "formula": "(f(g(x)))' = f'(g(x)) \\cdot g'(x)",
-    "type": "求导",
-    "color": "#4789f5"
-  },
-  {
-    "name": "Exponential Function | 指数函数",
+    "name": "Exponential Function | 指数函数e",
     "formula": "(e^x)' = e^x",
-    "type": "求导",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Exponential Function | 指数函数a",
+    "formula": "(a^x)' = a^x \\ln(a) \\quad (a > 0, a \\neq 1)",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Logarithm Base a | 以a为底的对数",
+    "formula": "(\\log_a(x))' = \\frac{1}{x \\ln(a)} \\quad (a > 0, a \\neq 1)",
+    "type": "基本求导公式",
     "color": "#4789f5"
   },
   {
     "name": "Natural Logarithm | 自然对数",
-    "formula": "(\\ln(x))' = \\frac{1}{x}",
-    "type": "求导",
+    "formula": "(\\ln|x|)' = \\frac{1}{x}",
+    "type": "基本求导公式",
     "color": "#4789f5"
   },
   {
     "name": "Sine Function | 正弦函数",
     "formula": "(\\sin(x))' = \\cos(x)",
-    "type": "求导",
+    "type": "基本求导公式",
     "color": "#4789f5"
   },
   {
     "name": "Cosine Function | 余弦函数",
     "formula": "(\\cos(x))' = -\\sin(x)",
-    "type": "求导",
+    "type": "基本求导公式",
     "color": "#4789f5"
   },
   {
+    "name": "Arcsine Function | 反正弦函数",
+    "formula": "(\\arcsin(x))' = \\frac{1}{\\sqrt{1 - x^2}}",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },  
+  {
+    "name": "Arccosine Function | 反余弦函数",
+    "formula": "(\\arccos(x))' = -\\frac{1}{\\sqrt{1 - x^2}}",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },  
+  {
     "name": "Tangent Function | 正切函数",
     "formula": "(\\tan(x))' = \\sec^2(x)",
-    "type": "求导",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Cotangent Function | 余切函数",
+    "formula": "(\\cot(x))' = -\\csc^2(x)",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Arctangent Function | 反正切函数",
+    "formula": "(\\arctan(x))' = \\frac{1}{1 + x^2}",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Arccotangent Function | 反余切函数",
+    "formula": "(\\operatorname{arccot}(x))' = -\\frac{1}{1 + x^2}",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Secant Function | 正割函数",
+    "formula": "(\\sec(x))' = \\sec(x) \\tan(x)",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Cosecant Function | 余割函数",
+    "formula": "(\\csc(x))' = -\\csc(x) \\cot(x)",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Natural Logarithm with Complex Argument | 复杂自变量的自然对数",
+    "formula": "\\left(\\ln\\left(x + \\sqrt{x^2 + 1}\\right)\\right)' = \\frac{1}{\\sqrt{x^2 + 1}}",
+    "type": "基本求导公式",
+    "color": "#4789f5"
+  },
+  {
+    "name": "Natural Logarithm with Complex Argument | 复杂自变量的自然对数",
+    "formula": "\\left(\\ln\\left(x + \\sqrt{x^2 - 1}\\right)\\right)' = \\frac{1}{\\sqrt{x^2 - 1}}",
+    "type": "基本求导公式",
     "color": "#4789f5"
   }
+  
+  
 ]

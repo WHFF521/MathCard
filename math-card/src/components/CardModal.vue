@@ -11,7 +11,7 @@
   </template>
   
   <script setup>
-  import { ref, computed, defineProps, defineEmits, watch } from 'vue';
+  import { ref, computed, watch } from 'vue';
   import katex from 'katex';
   import 'katex/dist/katex.min.css';
   
