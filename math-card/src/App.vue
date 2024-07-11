@@ -24,7 +24,7 @@ const currentCardIndex = ref(0);
 
 const fetchCards = async () => {
   try {
-    const response = await fetch('/src/assets/formulas.json');
+    const response = await fetch('/formulas.json');
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
