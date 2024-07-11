@@ -1,47 +1,32 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
+<!-- src/App.vue -->
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="outer-container">
+    <div class="card-container">
+      <Card v-for="number in cards" :key="number" :number="number" />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script setup>
+import { ref } from 'vue';
+import Card from './components/Card.vue';
+
+const cards = ref(Array.from({ length: 30 }, (_, i) => i + 1));
+</script>
+
+<style>
+.outer-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(6, 150px);
+  gap: 20px;
+  justify-content: center;
+  width: max-content; /* 确保卡片容器根据内容宽度动态调整 */
 }
 </style>
