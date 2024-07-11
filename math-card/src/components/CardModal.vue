@@ -3,9 +3,11 @@
   <div v-if="show" class="modal-overlay" @click.self="closeModal">
     <div class="modal-content">
       <button class="close-button" @click="closeModal">X</button>
-      <button class="arrow left" @click="prevCard">‹</button>
-      <div class="card" v-html="currentCardContent"></div>
-      <button class="arrow right" @click="nextCard">›</button>
+      <div class="navigation">
+        <button class="arrow left" @click="prevCard">‹</button>
+        <div class="card" v-html="currentCardContent"></div>
+        <button class="arrow right" @click="nextCard">›</button>
+      </div>
     </div>
   </div>
 </template>
@@ -80,17 +82,16 @@ const currentCardContent = computed(() => {
   border-radius: 10px;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .card {
+  width: calc(80vh * 5 / 3); /* 固定宽度 */
+  height: 80vh; /* 固定高度 */
   max-width: 80vw;
   max-height: 80vh;
-  height: 80vh;
-  width: calc(80vh * 5 / 3);
-  max-width: 80vw;
-  max-height: calc(80vw * 3 / 5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,49 +105,41 @@ const currentCardContent = computed(() => {
 /* 响应式设计 */
 @media (max-width: 767px) {
   .card {
+    width: 90vw; /* 调整手机上的卡片宽度 */
+    height: 60vh; /* 调整手机上的卡片高度 */
     font-size: 24px; /* 调整手机上的字体大小 */
-    width: 90%; /* 调整手机上的卡片宽度 */
-    height: auto; /* 调整手机上的卡片高度 */
-    padding: 10px; /* 增加内边距 */
   }
 }
 
-.close-button, .arrow {
-  position: absolute;
+.close-button {
+  align-self: flex-end;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1;
-}
-
-.close-button {
-  top: 20px;
-  right: 20px;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.arrow.left {
-  left: -60px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 48px;
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.arrow.right {
-  right: -60px;
-  top: 50%;
-  transform: translateY(-50%);
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
   font-size: 48px;
+  margin: 0 20px;
 }
 
 /* 响应式设计 */
 @media (max-width: 767px) {
-  .arrow.left {
-    left: 10px; /* 调整手机上的左箭头位置 */
-  }
-  
-  .arrow.right {
-    right: 10px; /* 调整手机上的右箭头位置 */
+  .arrow {
+    font-size: 24px; /* 调整手机上的箭头大小 */
+    margin: 0 10px; /* 调整箭头位置 */
   }
 }
 </style>
