@@ -1,12 +1,12 @@
 <!-- src/components/Card.vue -->
 <template>
-    <div class="card">
+    <div class="card" @click="handleClick">
       {{ number }}
     </div>
   </template>
   
   <script setup>
-  import { defineProps } from 'vue';
+  import { defineProps, defineEmits } from 'vue';
   
   const props = defineProps({
     number: {
@@ -14,6 +14,12 @@
       required: true
     }
   });
+  
+  const emits = defineEmits(['click']);
+  
+  const handleClick = () => {
+    emits('click');
+  };
   </script>
   
   <style scoped>
@@ -28,6 +34,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     font-size: 24px;
+    cursor: pointer;
   }
   </style>
   
