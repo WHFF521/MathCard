@@ -4,9 +4,7 @@
       <div class="modal-content">
         <button class="close-button" @click="closeModal">X</button>
         <button class="arrow left" @click="prevCard">‹</button>
-        <div class="card">
-          {{ currentCard }}
-        </div>
+        <div class="card" v-html="currentCardContent"></div>
         <button class="arrow right" @click="nextCard">›</button>
       </div>
     </div>
@@ -14,6 +12,8 @@
   
   <script setup>
   import { ref, computed, defineProps, defineEmits, watch } from 'vue';
+  import katex from 'katex';
+  import 'katex/dist/katex.min.css';
   
   const props = defineProps({
     show: Boolean,
@@ -45,7 +45,18 @@
     currentIndex.value = newIndex;
   });
   
-  const currentCard = computed(() => props.cards[currentIndex.value]);
+  const renderFormula = (formula) => {
+    return katex.renderToString(formula, {
+      throwOnError: false,
+    });
+  };
+  
+  const currentCardContent = computed(() => {
+    if (props.cards.length > 0) {
+      return renderFormula(props.cards[currentIndex.value].formula);
+    }
+    return '';
+  });
   </script>
   
   <style scoped>
@@ -74,12 +85,12 @@
   }
   
   .card {
-    max-width: 80vw; /* 卡片最大宽度占80%视口宽度 */
-    max-height: 80vh; /* 卡片最大高度占80%视口高度 */
-    width: 80vw;
-    height: calc(80vw * 5 / 3); /* 保持长宽比 150:250 = 3:5 */
+    max-width: 80vw;
     max-height: 80vh;
-    max-width: calc(80vh * 3 / 5); /* 保持长宽比 */
+    width: 80vw;
+    height: calc(80vw * 5 / 3);
+    max-height: 80vh;
+    max-width: calc(80vh * 3 / 5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,28 +105,28 @@
     position: absolute;
     background: none;
     border: none;
-    font-size: 24px;
     cursor: pointer;
     z-index: 1;
   }
   
   .close-button {
-    top: 0px;
-    right: 0px;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
   }
   
   .arrow.left {
-    left: -40px; /* 确保箭头与卡片有一定的距离 */
+    left: -60px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 48px; /* 增大箭头按钮的字体大小 */
+    font-size: 48px;
   }
   
   .arrow.right {
-    right: -40px; /* 确保箭头与卡片有一定的距离 */
+    right: -60px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 48px; /* 增大箭头按钮的字体大小 */
+    font-size: 48px;
   }
   </style>
   

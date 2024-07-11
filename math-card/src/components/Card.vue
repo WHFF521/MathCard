@@ -1,7 +1,7 @@
 <!-- src/components/Card.vue -->
 <template>
     <div class="card" @click="handleClick">
-      {{ number }}
+      {{ name }}
     </div>
   </template>
   
@@ -9,8 +9,8 @@
   import { defineProps, defineEmits } from 'vue';
   
   const props = defineProps({
-    number: {
-      type: Number,
+    name: {
+      type: String,
       required: true
     }
   });
@@ -24,7 +24,7 @@
   
   <style scoped>
   .card {
-    width: 150px; /* 卡片宽度 */
+    width: 100%; /* 确保卡片在网格系统中自适应宽度 */
     height: 250px; /* 卡片高度 */
     display: flex;
     align-items: center;
@@ -33,8 +33,11 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box; /* 确保内边距和边框在卡片内计算 */
   }
   </style>
   

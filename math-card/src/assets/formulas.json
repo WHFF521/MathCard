@@ -1,0 +1,15 @@
+[
+    {
+      "name": "Energy-Mass Equivalence",
+      "formula": "E = mc^2"
+    },
+    {
+      "name": "Fraction",
+      "formula": "\\frac{a}{b} = c"
+    },
+    {
+      "name": "Exponential Integral",
+      "formula": "\\int_{0}^{\\infty} e^{-x} \\, dx = 1"
+    }
+  ]
+  
