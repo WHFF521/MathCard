@@ -100,7 +100,78 @@
     "formula": "\\left(\\ln\\left(x + \\sqrt{x^2 - 1}\\right)\\right)' = \\frac{1}{\\sqrt{x^2 - 1}}",
     "type": "基本求导公式",
     "color": "#4789f5"
+  },
+  {
+    "name": "Power Rule for Integration | 幂积分法则",
+    "formula": "\\int x^k \\, dx = \\frac{1}{k+1} x^{k+1} + C, \\; k \\neq -1",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integral of 1/x | x分之一积分",
+    "formula": "\\int \\frac{1}{x} \\, dx = \\ln|x| + C",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Exponential Function Integration | 指数函数积分",
+    "formula": "\\int e^x \\, dx = e^x + C; \\quad \\int a^x \\, dx = \\frac{a^x}{\\ln a} + C, \\; a > 0, \\; a \\neq 1",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Trigonometric Functions Integration | 三角函数积分 1",
+    "formula": "\\int \\sin x \\, dx = -\\cos x + C; \\\\ \\int \\cos x \\, dx = \\sin x + C; \\\\ \\int \\tan x \\, dx = -\\ln|\\cos x| + C; \\\\ \\int \\cot x \\, dx = \\ln|\\sin x| + C;",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Trigonometric Functions Integration | 三角函数积分 2",
+    "formula": "\\int \\sec x \\, dx = \\ln|\\sec x + \\tan x| + C; \\\\ \\int \\csc x \\, dx = \\ln|\\csc x - \\cot x| + C; \\\\ \\int \\sec^2 x \\, dx = \\tan x + C; \\\\ \\int \\csc^2 x \\, dx = -\\cot x + C; \\\\ \\int \\sec x \\tan x \\, dx = \\sec x + C; \\\\ \\int \\csc x \\cot x \\, dx = -\\csc x + C",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integral of 1/(x^2 + a^2) | （x方+a方）分之一积分",
+    "formula": "\\int \\frac{1}{a^2 + x^2} \\, dx = \\frac{1}{a} \\arctan \\frac{x}{a} + C \\;(a > 0); \\\\ \\int \\frac{1}{1 + x^2} \\, dx = \\arctan x + C",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integral of 1/√(a^2 - x^2) | 根号下（a方-x方）分之一积分",
+    "formula": "\\int \\frac{1}{\\sqrt{a^2 - x^2}} \\, dx = \\arcsin \\frac{x}{a} + C \\;(a > 0); \\\\ \\int \\frac{1}{\\sqrt{1 - x^2}} \\, dx = \\arcsin x + C",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integral of 1/√(x^2 - a^2) | 根号下（x方-a方）分之一积分",
+    "formula": "\\int \\frac{1}{\\sqrt{x^2 - a^2}} \\, dx = \\ln|x + \\sqrt{x^2 - a^2}| + C \\;(|x| > |a|); \\\\ \\int \\frac{1}{\\sqrt{x^2 + a^2}} \\, dx = \\ln(x + \\sqrt{x^2 + a^2}) + C \\;(usually (a = 1))",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integral of 1/(x^2 - a^2) | （x方-a方）分之一积分",
+    "formula": "\\int \\frac{1}{x^2 - a^2} \\, dx = \\frac{1}{2a} \\ln \\left| \\frac{x - a}{x + a} \\right| + C \\;\\\\ \\int \\frac{1}{a^2 - x^2} \\, dx = \\frac{1}{2a} \\ln \\left| \\frac{x + a}{x - a} \\right| + C",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integral of Square Root of a^2 - x^2 | 根号a方减x方积分",
+    "formula": "\\int \\sqrt{a^2 - x^2} \\, dx = \\frac{a^2}{2} \\arcsin \\frac{x}{a} + \\frac{x}{2} \\sqrt{a^2 - x^2} + C \\;(a > |x| \\geq 0)",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integrals of sin and cos Squares | sin,cos平方积分",
+    "formula": "\\int \\sin^2 x \\, dx = \\frac{x}{2} - \\frac{\\sin 2x}{4} + C(\\sin^2 x = \\frac{1 - \\cos 2x}{2}); \\\\ \\int \\cos^2 x \\, dx = \\frac{x}{2} + \\frac{\\sin 2x}{4} + C(\\cos^2 x = \\frac{1 + \\cos 2x}{2})",
+    "type": "基本积分公式",
+    "color": "#f66a11"
+  },
+  {
+    "name": "Integrals of tan and cot Squares | tan,cot平方积分",
+    "formula": "\\int \\tan^2 x \\, dx = \\tan x - x + C(\\tan^2 x = \\sec^2 x - 1); \\\\ \\int \\cot^2 x \\, dx = -\\cot x - x + C(\\cot^2 x = \\csc^2 x - 1)",
+    "type": "基本积分公式",
+    "color": "#f66a11"
   }
-  
   
 ]
