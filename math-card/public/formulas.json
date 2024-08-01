@@ -172,6 +172,65 @@
     "formula": "\\int \\tan^2 x \\, dx = \\tan x - x + C(\\tan^2 x = \\sec^2 x - 1); \\\\ \\int \\cot^2 x \\, dx = -\\cot x - x + C(\\cot^2 x = \\csc^2 x - 1)",
     "type": "基本积分公式",
     "color": "#f66a11"
+  },
+  {
+    "name": "Boundedness and Extreme Value Theorem | 有界与最值定理",
+    "formula": "如果函数 f(x) 在闭区间 [a, b] 上连续，\\\\那么存在实数 m 和 M，\\\\使得对于所有 x ∈ [a, b]，有 m ≤ f(x) ≤ M。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Intermediate Value Theorem | 介值定理",
+    "formula": "如果 m ≤ \\mu ≤ M，\\\\那么存在 \\xi ∈ [a, b]，\\\\使得 f(\\xi) = \\mu。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Mean Value Theorem | 平均值定理",
+    "formula": "设函数 f(x) 在闭区间 [a, b] 上连续，\\\\并且在开区间 (a, b) 上可导，\\\\如果 a < x_1 < x_2 < ... < x_n < b，\\\\则在 [x_1, x_n] 内至少存在一个点，\\\\使得 f(\\xi) = \\frac{f(x_1) + f(x_2) + ... + f(x_n)}{n}。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Zero-Point Theorem | 零点定理",
+    "formula": "如果函数 f(x) 在闭区间 [a, b] 上连续，\\\\并且 f(a) 和 f(b) 异号，\\\\那么至少存在一个点 \\xi ∈ (a, b)，\\\\使得 f(\\xi) = 0。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Fermat's Theorem | 费马定理",
+    "formula": "设函数 f(x) 在点 x_0 处可导，\\\\并且 f(x_0) 是 f(x) 在 x_0 附近的极值点，\\\\则 f'(x_0) = 0。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Derivative Zero Theorem | 导数零点定理",
+    "formula": "如果函数 f(x) 在闭区间 [a, b] 上连续，\\\\并且在开区间 (a, b) 上可导，\\\\且 f'(a) * f'(b) < 0，\\\\那么在 (a, b) 内至少存在一个点 \\xi ，\\\\使得 f'(\\xi) = 0。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Rolle's Theorem | 罗尔定理",
+    "formula": "如果函数 f(x) 在闭区间 [a, b] 上连续，\\\\并且在开区间 (a, b) 上可导，\\\\且 f(a) = f(b)，\\\\那么在 (a, b) 内至少存在一个点 \\xi ，\\\\使得 f'(\\xi) = 0。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Lagrange's Mean Value Theorem | 拉格朗日中值定理",
+    "formula": "如果函数 f(x) 在闭区间 [a, b] 上连续，\\\\并且在开区间 (a, b) 上可导，\\\\那么存在一个点 \\xi ∈ (a, b)，\\\\使得 f'(\\xi) = \\frac{f(b) - f(a)}{b - a}。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Cauchy's Mean Value Theorem | 柯西中值定理",
+    "formula": "如果函数 f(x) 和 g(x) 在闭区间 [a, b] 上连续，\\\\并且在开区间 (a, b) 上可导，\\\\且 g'(x) ≠ 0，\\\\那么存在一个点 \\xi ∈ (a, b)，\\\\使得 \\frac{f'(\\xi)}{g'(\\xi)} = \\frac{f(b) - f(a)}{g(b) - g(a)}。",
+    "type": "中值定理",
+    "color": "#1cccb9"
+  },
+  {
+    "name": "Taylor's Theorem | 泰勒公式",
+    "formula": "如果函数 f(x) 在点 x_0 处具有 n 次连续导数，\\\\则 f(x) 可以表示为 f(x) = f(x_0) + f'(x_0)(x - x_0) + \\frac{f''(x_0)}{2!}(x - x_0)^2 + ... + \\frac{f^{(n)}(x_0)}{n!}(x - x_0)^n + R_n(x)，\\\\其中 R_n(x) 是剩余项，表示为 R_n(x) = \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x - x_0)^{n+1}，其中 \\xi 介于 x 和 x_0 之间。",
+    "type": "中值定理",
+    "color": "#1cccb9"
   }
-  
 ]
